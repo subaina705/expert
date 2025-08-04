@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <h1>EXPERT</h1>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li> <a href="#">Projects</a></li>
+                    <li><a href="#">Process</a></li>
+                    <li> <a href="#">Testimonials</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="contact">
+            <li class="pricing-link"><a href="#">Pricing</a></li>
+            <li class="cta"><a href="#">Contact</a></li>
+
+
+        </div>
+    </nav>
+    <main>
+        <section id="hero">
+            <div class="intro-section">
+                <div class="container">
+                    <div class="row-1">
+                        <div class="hero-text">
+                            <h1>WELCOME</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum
+                                amet natus quas necessitatibus.</p>
+                            <p><a class="btn btn-outline" href="#">Get Started</a></p>
+                        </div>
+                        <div class="hero-imgs">
+                            <div class="slider">
+                                <img src="assets/images/img_3.jpg.webp" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script>
+        window.addEventListener('scroll', function () {
+            const nav = document.querySelector('.navbar');
+            if (window.scrollY > 10) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: "Mulish", sans-serif;
+    line-height: 1.7;
+    color: gray;
+    font-weight: 300;
+    font-size: 1.1rem;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 62px;
+}
+
+
+.logo {
+    color: black;
+    font-weight: 900;
+    font-size: 0.9rem;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: .2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+    position: relative;
+
+}
+
+nav li {
+    padding: 5px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    padding-left: 7rem;
+}
+
+.list {
+    align-self: center;
+    padding-left: 2.5rem;
+}
+
+.contact {
+    display: flex;
+    padding-right: 7rem;
+    margin-left: 217px;
+}
+
+.contact li {
+    list-style: none;
+    padding: 7px 20;
+}
+
+.cta a {
+    color: white;
+    border-bottom: none !important;
+}
+
+.cta {
+    background-color: #dc3545;
+    margin-left: 22px;
+    border-radius: 4px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 2px;
+    background-color: #352961;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.cta a:hover {
+    color: white;
+}
+
+.cta a::after {
+    display: none;
+    content: none;
+}
+
+.intro-section {
+    height: 100vh;
+    min-height: 1200px;
+}
+
+.intro-section:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    z-index: 0;
+    background: #352961;
+    border-bottom-right-radius: 200px;
+    height: 1200px;
+}
+
+/* Default transparent navbar (top of page) */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 8px 0px;
+    z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a,
+.navbar .logo {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.cta a {
+    color: white;
+    border-bottom: none !important;
+}
+
+.cta a:hover {
+    color: white;
+}
+
+.cta a::after {
+    display: none;
+    content: none;
+}
+
+/* When scrolled - white background, black text */
+.navbar.scrolled {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar.scrolled a,
+.navbar.scrolled .logo {
+    color: black;
+}
+
+/* Underline color after scroll */
+.navbar.scrolled a::after {
+    background-color: #352961;
+}
+
+/* Default state: when navbar is at top */
+.navbar a:hover {
+    color: white;
+}
+
+/* When navbar is scrolled, change hover color */
+.navbar.scrolled a:hover {
+    color: #352961;
+}
+
+.navbar .pricing-link a {
+    color: black;
+}
+
+/* When navbar is scrolled — go back to normal */
+.navbar.scrolled .pricing-link a {
+    color: black;
+}
+
+.navbar .pricing-link a:hover {
+    color: black;
+}
+
+/* Pricing link underline when navbar is at top */
+.navbar .pricing-link a::after {
+    background-color: black;
+}
+
+/* When navbar is scrolled – match the rest */
+.navbar.scrolled .pricing-link a::after {
+    background-color: #352961;
+    /* or whatever you use globally */
+}
+
+.navbar.scrolled .cta a {
+    color: white !important;
+}
+
+.intro-section {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.container,
+.hero-text,
+.hero-imgs {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-family: "Oswald", sans-serif;
+}
+
+.intro-section h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+}
+.intro-section p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.1rem;
+    max-width: 400px;
+}
+
+.hero-text {
+    max-width: 445px;
+    padding-right: 15px;
+    align-self: center;
+
+}
+a{
+    text-decoration: none;
+}
+p{
+    margin-bottom: 3rem;
+}
+.btn{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 900;
+}
+.btn:hover{
+    background: #fff;
+    color: #000;
+}
+.btn-outline{
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: 2px solid white;
+   border-radius: 3px;
+}
+.hero-imgs{
+     max-width: 540px;
+    border-top-left-radius: 200px;
+    overflow: hidden; 
+    height: 100%; 
+    box-shadow: 0 30px 100px -20px rgba(0, 0, 0, 0.4);
+}
+.hero-imgs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+.row-1{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+        gap: 150px;
+
+}
