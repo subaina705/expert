@@ -663,9 +663,7 @@ a {
 .testimonials {
     display: flex;
     flex-direction: column;
-    /* Stack items vertically */
     align-items: center;
-    /* Center horizontally */
     text-align: center;
     padding: 4rem 1rem;
     padding: 10em 0;
@@ -856,7 +854,7 @@ a {
 
 }
 
-/* container */
+
 .contact-section {
     max-width: 1140px;
     margin: 0 auto;
@@ -864,31 +862,26 @@ a {
     box-sizing: border-box;
 }
 
-/* two-column row: left = text+form, right = image */
+
 .row-4 {
     display: flex;
     gap: 100px;
     align-items: stretch;
-    /* makes image match left column height */
+
 }
 
-/* left column */
 .contact-left {
     flex: 1;
-    /* fills remaining space */
     display: flex;
     flex-direction: column;
 }
 
-/* right column (fixed width like your screenshot) */
 .contact-img {
     flex: 0 0 450px;
-    /* fixed width */
     max-width: 450px;
     display: block;
 }
 
-/* image fills its container and crops if needed */
 .contact-img img {
     width: 100%;
 
@@ -898,13 +891,11 @@ a {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
-/* Title + intro */
 .title h2 {
     font-size: 40px;
     font-weight: 800;
     text-transform: uppercase;
     color: #241b56;
-    /* purple from your screenshot */
     margin: 0 0 12px 0;
     letter-spacing: 1px;
 }
@@ -916,13 +907,12 @@ a {
     max-width: 680px;
 }
 
-/* FORM styles */
 .contact-form {
     margin-top: 10px;
     display: block;
 }
 
-/* two inputs in a row */
+
 .form-row {
     display: flex;
     gap: 15px;
@@ -1058,6 +1048,17 @@ footer {
 
 .top-border i {
     color: #dc3545;
+}
+
+.contact-form button {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: 2px solid white;
+    border-radius: 3px;
+    background-color: #352961;
+    color: white;
 }
 
 .top-border p {
@@ -1214,7 +1215,7 @@ footer {
     }
 
     .counter-row {
-        padding: 6em 0;
+        padding: 4em 0;
     }
 
     .pricing-cards {
@@ -1276,36 +1277,80 @@ footer {
         font-size: 22px;
     }
 
+    .video {
+        max-width: 380px;
+    }
+
     .row-3 {
         max-width: 380px;
         margin: auto;
         padding-left: 0;
     }
-    .testimonials{
-         max-width: 380px;
+
+    .testimonials {
+        max-width: 380px;
         margin: auto;
     }
-    .blockquote{
+
+    .blockquote {
         font-size: 1.2rem;
     }
-    .price{
+
+    .price {
         font-size: 3rem !important;
     }
-    .icon-play i{
+
+    .icon-play i {
         color: white;
     }
-    .icon-play{
+
+    .icon-play {
         background-color: transparent;
     }
-    .in-one{
+
+    .in-one {
         flex-direction: row;
     }
-    .logo h1{
+
+    .logo h1 {
         font-size: 1.5em !important;
+    }
+
+    .slide {
+        flex: 0 0 50%;
+    }
+
+    .left-col {
+        margin-right: 0;
+    }
+
+    .footer-row {
+        max-width: 390px;
+        margin: auto;
+        gap: 15px;
+    }
+
+    .footer-row h3 {
+        margin-bottom: 0;
+    }
+
+    .links ul li {
+        margin-bottom: 5px;
+    }
+
+    .links ul a {
+        font-size: 14px;
+    }
+    .f1 p{
+        margin-bottom: 0;
+    }
+    .subscribe p{
+        margin-bottom: 0;
+
     }
 }
 
-/* responsive: stack columns under 900px */
+
 @media (max-width: 900px) {
     .row-4 {
         flex-direction: column;

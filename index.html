@@ -502,19 +502,40 @@
     </script>
     <script>
         const track = document.querySelector('.slider-track');
-        const dots = document.querySelectorAll('.dot');
+        const dotsContainer = document.querySelector('.dots');
 
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                const slideWidth = document.querySelector('.slide').offsetWidth;
-                track.style.transform = `translateX(-${index * 4 * slideWidth}px)`;
+        function setupSlider() {
+            const slides = document.querySelectorAll('.slide');
+            const slideWidth = slides[0].offsetWidth;
 
-                dots.forEach(d => d.classList.remove('active'));
-                dot.classList.add('active');
-            });
-        });
+            // Detect how many per page
+            const slidesPerPage = window.innerWidth <= 425 ? 2 : 4;
+
+            // Calculate how many "pages" there will be
+            const totalPages = Math.ceil(slides.length / slidesPerPage);
+
+            // Create dots dynamically
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalPages; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dotsContainer.appendChild(dot);
+
+                dot.addEventListener('click', () => {
+                    track.style.transform = `translateX(-${i * slidesPerPage * slideWidth}px)`;
+                    document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                    dot.classList.add('active');
+                });
+            }
+        }
+
+        window.addEventListener('resize', setupSlider);
+        window.addEventListener('load', setupSlider);
     </script>
+
     <!-- service -->
+    <script></script>
 
 
 
